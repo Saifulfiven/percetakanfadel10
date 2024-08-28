@@ -1,8 +1,8 @@
-@extends('Landingpage.layout')
+@extends('landingpage.layout')
 
 @section('content')
 
 @include('shopdetail.shop-single')
-@include('Landingpage.main')
+@include('landingpage.main')
 
 @endsection

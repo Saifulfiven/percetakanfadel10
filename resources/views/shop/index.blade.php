@@ -1,9 +1,9 @@
-@extends('Landingpage.layout')
+@extends('landingpage.layout')
 
 @section('content')
 
 @include('shop.semua-produk')
 @include('shop.brand-produk')
-@include('Landingpage.carouselproduk')
+@include('landingpage.carouselproduk')
 
 @endsection

@@ -4,7 +4,11 @@
 
     <link rel="apple-touch-icon" href="{{ asset('assets/img/apple-icon.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}">
+    <meta property="og:title" content="Percetakan Terbaik di Indonesia Timur" />
 
+    <meta property="og:image" content="{{ asset('assets/img/logo.png') }}" />
+    <meta property="og:description" content="Percetakan Terbaik di Indonesia Timur" />
+    <meta name="keywords" content="Percetakan Fadel, Percetakan Makassar, Cetak Spanduk, Cetak Brosur, Percetakan Undangan" />
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">

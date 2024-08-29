@@ -16,7 +16,7 @@
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">082291938794</a>
+                            <a class="text-decoration-none" href="tel:+62811452439">+62811452439</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
@@ -66,13 +66,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-auto">
-                    <label class="sr-only" for="subscribeEmail">Email address</label>
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control border-light" id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-primary text-light">Subscribe</div>
-                    </div>
-                </div>
+                
             </div>
         </div>
 
@@ -82,7 +76,7 @@
                     <div class="col-12">
                         <p class="text-left">
                             Copyright &copy; 2024 Fadel Printing
-                            | Designed by <a rel="sponsored" href="https://storynikah.com" target="_blank">Fiventech</a>
+                            | Designed by <a rel="sponsored" href="https://storynikah.com" target="_blank">Fadel Printing</a>
                         </p>
                     </div>
                 </div>

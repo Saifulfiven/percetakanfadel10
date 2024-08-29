@@ -3,9 +3,9 @@
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">admin@fadelprinting.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:admin@fadelprint.com">admin@fadelprinting.com</a>
                     <i class="fa fa-phone mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+62811452439">+62811452439</a>
                 </div>
                 <div>
                 <?php

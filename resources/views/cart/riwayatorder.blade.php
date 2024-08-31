@@ -23,7 +23,7 @@
                         @foreach($orders as $item)
                             <tr>
                                 <td>{{ $item->kodeorder }}</td>
-                               <td>Rp. {{ number_format($item->totalbayar, 0, ',', '.') }}</td>
+                               <td>Rp. {{ $item->totalbayar }}</td>
                                <td>{{ $item->created_at }}</td>
                                <td>
                                 @if($item->status == 'Lunas')

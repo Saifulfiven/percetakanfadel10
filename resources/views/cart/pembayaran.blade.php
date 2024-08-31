@@ -1,4 +1,4 @@
-@extends('Landingpage.layout')
+@extends('landingpage.layout')
 
 @section('content')
 

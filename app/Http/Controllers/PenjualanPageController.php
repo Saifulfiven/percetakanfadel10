@@ -119,7 +119,7 @@ class PenjualanPageController extends Controller
 
     public function pembayaran($kodeorder)
     {
-
+error_reporting(0);
         $toptitle = "Pembayaran Pembelian, Kode Order $kodeorder";
         $header = false;
         $kodeorder = $kodeorder;

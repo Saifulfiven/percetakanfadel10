@@ -48,7 +48,7 @@
                 </table>
 
                 <div class="col-sm-12">
-                    <h6>Total Bayar Rp {{ number_format($total_bayar, 0, ',', '.') }}</h6>
+                    <h6>Total Bayar Rp {{ $total_bayar }}</h6>
                 </div>
                   
               </div>
@@ -61,11 +61,11 @@
               <div class="col-md-6">
                   <div class="row">
                   <div class="col-md-6">
-                    <img src="{{ asset('images/bri.jpeg') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('images/rekening_bri.jpg') }}" class="img-fluid" style="border-radius:10px" alt="">
                   </div>
 
                   <div class="col-md-6  mt-1">
-                    <img src="{{ asset('images/bsi.jpg') }}" class="img-fluid" alt="" width="95%">
+                    <img src="{{ asset('images/rekening_bca.jpg') }}" class="img-fluid"  style="border-radius:10px" alt="">
                   </div>
                 </div>
                 
@@ -79,7 +79,7 @@
                     <div class="form-group">
                       
                       <div class="col-sm-12" style="background-color: #28a745; color: white; padding:10px">
-                        Lakukan Pembayaran Sesuai Total Yang Tertera : <h3 style="color: white;">Rp. {{ number_format($total_bayar, 0, ',', '.') }}</h3>
+                        Lakukan Pembayaran Sesuai Total Yang Tertera : <h3 style="color: white;">Rp. {{ $total_bayar }}</h3>
                       </div>
                       <br>
 

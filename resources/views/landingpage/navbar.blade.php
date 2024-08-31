@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-primary logo h1 align-self-center" href="index.html" style="background: linear-gradient(to right, #00b0ff, #0000ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            <a class="navbar-brand text-primary logo h1 align-self-center" href="/" style="background: linear-gradient(to right, #00b0ff, #0000ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                 FadelPrinting
             </a>
 

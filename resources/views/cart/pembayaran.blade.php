@@ -61,11 +61,11 @@
               <div class="col-md-6">
                   <div class="row">
                   <div class="col-md-6">
-                    <img src="{{ asset('images/rekening_bri.jpg') }}" class="img-fluid" style="border-radius:10px" alt="">
+                    <img src="{{ asset('images/Rekening_BRI.jpg') }}" class="img-fluid" style="border-radius:10px" alt="">
                   </div>
 
                   <div class="col-md-6  mt-1">
-                    <img src="{{ asset('images/rekening_bca.jpg') }}" class="img-fluid"  style="border-radius:10px" alt="">
+                    <img src="{{ asset('images/Rekening_BCA.jpg') }}" class="img-fluid"  style="border-radius:10px" alt="">
                   </div>
                 </div>
                 

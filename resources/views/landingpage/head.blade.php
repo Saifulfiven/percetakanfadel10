@@ -6,9 +6,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}">
     <meta property="og:title" content="Percetakan Terbaik di Indonesia Timur" />
 
-    <meta property="og:image" content="{{ asset('assets/img/logo.png') }}" />
     <meta property="og:description" content="Percetakan Terbaik di Indonesia Timur" />
-    <meta name="keywords" content="Percetakan Fadel, Percetakan Makassar, Cetak Spanduk, Cetak Brosur, Percetakan Undangan" />
+    <meta name="keywords" content="fadel printing, Percetakan Fadel, Percetakan Makassar, Cetak Spanduk, Cetak Brosur, Percetakan Undangan" />
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
@@ -19,6 +18,14 @@
     
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick-theme.css') }}">
+    <meta property="og:image" content="{{ asset('images/head1.jpg') }}" />
+    <style>
+        /* CSS untuk membuat gambar responsif */
+        .responsive-image {
+            max-width: 100%;
+            min-width: 100%;
+        }
+    </style>
 <!--
     
 TemplateMo 559 Zay Shop

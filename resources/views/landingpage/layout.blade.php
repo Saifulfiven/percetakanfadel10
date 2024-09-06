@@ -6,6 +6,7 @@ chat='true'>
 </script>
 <head>
     @include('landingpage.head')
+  
 </head>
 <body>
     @include('landingpage.header')

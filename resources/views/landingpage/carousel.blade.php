@@ -7,52 +7,33 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/undangan-produk-7.jpg" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left align-self-center" style="background: linear-gradient(to right, #00b0ff, #0000ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                                <h1 class="h1 text-success"><b>Fadel</b> Printing</h1>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/undangan-produk-2.jpg" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 class="h1" style="background: linear-gradient(to right, #00b0ff, #0000ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Percetakan </h1>
-                                <h3>Stiker, Brosur, Poster, Merchandise, Kartu Nama</h3>
-                               
-                            </div>
-                        </div>
-                    </div>
+                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head2.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/undangan-produk-4.jpg" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 style="background: linear-gradient(to right, #00b0ff, #0000ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hadir dengan Pelayanan Tercepat dan Termurah</h1>
-                                <p>Dengan Kualitas Terbaik</p>
-                               
-                            </div>
-                        </div>
-                    </div>
+                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head3.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
                 </div>
             </div>
+            
         </div>
         <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
             <i class="fas fa-chevron-left"></i>

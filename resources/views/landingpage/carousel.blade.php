@@ -39,3 +39,15 @@
         </a>
     </div>
     <!-- End Banner Hero -->
+
+    <style>
+        .whatsapp-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+    </style>
+    <a href="https://wa.me/62811452439" class="whatsapp-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" width="50px" height="50px" alt="whatsapp">
+    </a>

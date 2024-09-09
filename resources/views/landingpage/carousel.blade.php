@@ -7,33 +7,29 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head4.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
-                background-position: center center;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;">
+                <div class="d-block d-md-none">
+                    <img src="./images/head1.jpeg" class="img-fluid" alt="First Slide" >
+                </div>
+                <div class="d-none d-md-block">
+                    <img src="./images/head1.jpeg" class="img-fluid" alt="First Slide"  height="700px">
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head4.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
-                background-position: center center;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;">
+                <div class="d-block d-md-none">
+                    <img src="./images/head2.jpeg" class="img-fluid" alt="Second Slide">
+                </div>
+                <div class="d-none d-md-block">
+                    <img src="./images/head2.jpeg" class="img-fluid" alt="Second Slide" height="700px">
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head4.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
-                background-position: center center;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;">
+                <div class="d-block d-md-none">
+                    <img src="./images/head3.jpeg" class="img-fluid" alt="Third Slide">
+                </div>
+                <div class="d-none d-md-block">
+                    <img src="./images/head3.jpeg" class="img-fluid" alt="Third Slide" height="700px">
                 </div>
             </div>
-            
         </div>
         <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
             <i class="fas fa-chevron-left"></i>

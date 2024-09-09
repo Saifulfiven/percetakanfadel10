@@ -8,26 +8,26 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="d-block d-md-none">
-                    <img src="./images/head1.jpeg" class="img-fluid" alt="First Slide" >
+                    <img src="./images/head1mobile.jpeg" class="img-fluid" alt="Fadel Printing"  height="1000px">
                 </div>
                 <div class="d-none d-md-block">
-                    <img src="./images/head1.jpeg" class="img-fluid" alt="First Slide"  height="700px">
+                    <img src="./images/head1.jpeg" class="img-fluid" alt="Fadel Printing"  height="700px">
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="d-block d-md-none">
-                    <img src="./images/head2.jpeg" class="img-fluid" alt="Second Slide">
+                    <img src="./images/head2mobile.jpeg" class="img-fluid" alt="Fadel Printing" height="1000px">
                 </div>
                 <div class="d-none d-md-block">
-                    <img src="./images/head2.jpeg" class="img-fluid" alt="Second Slide" height="700px">
+                    <img src="./images/head2.jpeg" class="img-fluid" alt="Fadel Printing" height="700px">
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="d-block d-md-none">
-                    <img src="./images/head3.jpeg" class="img-fluid" alt="Third Slide">
+                    <img src="./images/head3mobile.jpeg" class="img-fluid" alt="Fadel Printing" height="1000px">
                 </div>
                 <div class="d-none d-md-block">
-                    <img src="./images/head3.jpeg" class="img-fluid" alt="Third Slide" height="700px">
+                    <img src="./images/head3.jpeg" class="img-fluid" alt="Fadel Printing" height="700px">
                 </div>
             </div>
         </div>

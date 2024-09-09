@@ -7,7 +7,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;
+                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head4.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
                 background-position: center center;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head2.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;
+                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head4.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
                 background-position: center center;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head3.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;
+                <div class="responsive-image" style="height: 70vh; background-image: url('./images/head4.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
                 background-position: center center;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;

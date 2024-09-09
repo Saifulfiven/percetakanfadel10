@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<script
+<!-- <script
 src='//fw-cdn.com/11939191/4502733.js'
 chat='true'>
-</script>
+</script> -->
 <head>
     @include('landingpage.head')
   

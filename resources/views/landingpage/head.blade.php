@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
@@ -18,6 +19,7 @@
     
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick-theme.css') }}">
+    
     <meta property="og:image" content="{{ asset('images/head1.jpg') }}" />
     <style>
         /* CSS untuk membuat gambar responsif */

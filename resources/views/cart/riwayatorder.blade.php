@@ -28,10 +28,10 @@
                                <td>
                                 @if($item->status == 'Lunas')
                                 <button class="btn btn-success">Lunas</button>
+                                @elseif($item->status == 'Pending')
+                                <button class="btn btn-warning">Pending</button>
                                 @elseif($item->status == 'Belum Lunas')
                                 <button class="btn btn-warning">Belum Lunas</button>
-                                @elseif($item->status == 'Menunggu Konfirmasi Admin')
-                                <button class="btn btn-warning">Menunggu Konfirmasi Admin</button>
                                 @endif
                                 </td>
                                 <td>{{ $item->statuspengerjaan }}</td>

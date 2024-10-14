@@ -28,6 +28,14 @@ class LoginPageController extends Controller
         return view('login.signin', compact('judulconten','header'));
     }
 
+    
+    public function profile()
+    {
+        $header = false;
+        $user = Penggunas::where('kodecustomer', Session::get('kodecustomer'))->first();
+        return view('login.profile', compact('user','header'));
+    }
+
    //Saiful
 
     // public function actionlogin(Request $request)

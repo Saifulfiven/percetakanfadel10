@@ -1,16 +1,16 @@
 <div class="container-fluid py-4">
       <div class="row">
 
-      <h4>Selamat Datang, Pak Faril</h4><br>
+      <h4>Selamat Datang, Admin</h4><br>
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body p-3">
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Semua aset</p>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Produk</p>
                     <h5 class="font-weight-bolder mb-0">
-                      230
+                      {{ $jumlahproduk }}
                     </h5>
                   </div>
                 </div>
@@ -29,9 +29,9 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">aset Rusak Hari ini</p>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Transaksi</p>
                     <h5 class="font-weight-bolder mb-0">
-                      8
+                      {{ $jumlahtransaksi }}
                       <span class="text-success text-sm font-weight-bolder"></span>
                     </h5>
                   </div>
@@ -51,10 +51,9 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Pengeluaran BBM</p>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Selesai</p>
                     <h5 class="font-weight-bolder mb-0">
-                      4.300.000
-                      <span class="text-danger text-sm font-weight-bolder">400 Liter</span>
+                      {{ $jumlahtransaksipengerjaan }}
                     </h5>
                   </div>
                 </div>
@@ -75,8 +74,7 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Pengguna</p>
                     <h5 class="font-weight-bolder mb-0">
-                      12
-                      <span class="text-success text-sm font-weight-bolder">+1</span>
+                      {{ $jumlahpengguna }}
                     </h5>
                   </div>
                 </div>
@@ -98,12 +96,13 @@
             <div class="card-header pb-0">
               <div class="row">
                 <div class="col-lg-6 col-7">
-                  <h6>Laporan Kondisi aset hari ini</h6>
+                  <h6>Jumlah Order hari ini</h6>
                   <p class="text-sm mb-0">
                     <i class="fa fa-check text-info" aria-hidden="true"></i>
-                    <span class="font-weight-bold ms-1">Rabu, </span>11  Juni 2024
+                    <span class="font-weight-bold ms-1">{{ date('d-m-Y') }}</span>
                   </p>
                 </div>
+
                 <div class="col-lg-6 col-5 my-auto text-end">
                   <div class="dropdown float-lg-end pe-4">
                     <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
@@ -116,34 +115,24 @@
             </div>
             <div class="card-body px-0 pb-2">
               <div class="table-responsive">
-              <?php
-              $data_aset = [
-                ['nama_aset' => 'aset 1', 'kode_aset' => 'K001', 'kondisi_aset' => 'Baik', 'dipakai_oleh' => 'Admin'],
-                ['nama_aset' => 'aset 2', 'kode_aset' => 'K002', 'kondisi_aset' => 'Rusak', 'dipakai_oleh' => 'Pengguna'],
-                ['nama_aset' => 'aset 3', 'kode_aset' => 'K003', 'kondisi_aset' => 'Rusak Ringan', 'dipakai_oleh' => 'Pengguna2'],
-                ['nama_aset' => 'aset 4', 'kode_aset' => 'K004', 'kondisi_aset' => 'Baik', 'dipakai_oleh' => 'Admin'],
-                ['nama_aset' => 'aset 5', 'kode_aset' => 'K005', 'kondisi_aset' => 'Rusak', 'dipakai_oleh' => 'Pengguna'],
-                ['nama_aset' => 'aset 6', 'kode_aset' => 'K006', 'kondisi_aset' => 'Rusak Ringan', 'dipakai_oleh' => 'Pengguna2'],
-                ['nama_aset' => 'aset 7', 'kode_aset' => 'K007', 'kondisi_aset' => 'Baik', 'dipakai_oleh' => 'Admin'],
-                ['nama_aset' => 'aset 8', 'kode_aset' => 'K008', 'kondisi_aset' => 'Rusak', 'dipakai_oleh' => 'Pengguna']
-              ];
-              ?>
+              
+              
                 <table class="table align-items-center mb-0">
                   <thead role="row">
                     <tr>
-                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Nama aset</th>
-                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Kode aset</th>
-                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Kondisi aset</th>
-                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Dipakai Oleh</th>
+                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Kode Order</th>
+                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Nama Lengkap</th>
+                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Total Bayar</th>
+                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Status Bayar</th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($data_aset as $aset)
+                    @foreach ($jumlahtransaksiperhari as $item)
                       <tr role="row">
-                        <td class="text-center">{{ $aset['nama_aset'] }}</td>
-                        <td class="text-center">{{ $aset['kode_aset'] }}</td>
-                        <td class="text-center">{{ $aset['kondisi_aset'] }}</td>
-                        <td class="text-center">{{ $aset['dipakai_oleh'] }}</td>
+                        <td class="text-center">{{ $item['kodeorder'] }}</td>
+                        <td class="text-center">{{ $item['namalengkap'] }}</td>
+                        <td class="text-center">{{ $item['totalbayar'] }}</td>
+                        <td class="text-center">{{ $item['status'] }}</td>
                       </tr>
                     @endforeach
                     

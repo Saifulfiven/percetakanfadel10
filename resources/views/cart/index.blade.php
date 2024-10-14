@@ -59,7 +59,12 @@
                         <a href="/" class="btn btn-success">Lanjutkan Belanja</a>
                     </div>
                     <div class="col-md-2 d-grid">
-                        <a href="/selesaipembelian" class="btn btn-primary">Checkout</a>
+                         <a href="/selesaipembelian" class="btn btn-primary">Checkout</a>
+                        <!-- <button id="pay-button">Bayar Sekarang</button> -->
+
+                    <script type="text/javascript">
+                        
+                    </script>
                     </div>
                 </div>
             </div>

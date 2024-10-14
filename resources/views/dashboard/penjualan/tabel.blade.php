@@ -23,6 +23,7 @@
 
             <div class="card-header pb-0 position-relative mb-5">
               <h6>Data Order Penjualan</h6>
+              <a href="https://dashboard.midtrans.com/login" target="_blank" class="btn btn-dark btn-sm mb-3">Dashboard Midtrans</a>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-3">

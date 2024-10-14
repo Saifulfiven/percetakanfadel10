@@ -42,15 +42,48 @@ class PenjualanPageController extends Controller
             if($order){
 
             
-                $order = new \App\Models\Orders;
-                $order->kodecustomer = $kodecustomer;
-                $order->kodeorder    = $kodeorder;
-                $order->status       = "Belum Lunas";
-                $order->statuspengerjaan = "Belum Diproses";
+                // $order = new \App\Models\Orders;
+                // $order->kodecustomer = $kodecustomer;
+                // $order->kodeorder    = $kodeorder;
+                // $order->status       = "Pending";
+                // $order->statuspengerjaan = "Belum Diproses";
                 foreach ($jumlah_pesanan as $key => $value) {
                     $order->totalbayar += $value;
                 }
-                $order->save();
+
+                // $order->save();
+
+                $transaksi = Orders::create([
+                    'kodecustomer'      => $kodecustomer,
+                    'kodeorder'         => $order->kodeorder,
+                    'totalbayar'        => $order->totalbayar,
+                    'status'            => "Pending",
+                    'statuspengerjaan'  => "Belum Diproses",
+                ]);
+
+                // Set your Merchant Server Key
+                \Midtrans\Config::$serverKey = config('midtrans.serverKey');
+                // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+                \Midtrans\Config::$isProduction = true;
+                // Set sanitization on (default)
+                \Midtrans\Config::$isSanitized = true;
+                // Set 3DS transaction for credit card to true
+                \Midtrans\Config::$is3ds = true;
+
+                $params = array(
+                    'transaction_details' => array(
+                        'order_id' => $kodeorder,
+                        'gross_amount' => $order->totalbayar,
+                    ),
+                    'customer_details' => array(
+                        'first_name' => $order->kodecustomer.'-'.$namalengkap,
+                        'email' => $order->kodecustomer,
+                    ),
+                );
+
+                $snapToken = \Midtrans\Snap::getSnapToken($params);
+                $transaksi->snap_token = $snapToken;
+                $transaksi->save();
             }
             
                 // $order->totalbayar   = Cart::total();
@@ -131,6 +164,7 @@ error_reporting(0);
                 ->get();
 
             $totalBayar = Orders::where('kodeorder', $kodeorder)->value('totalbayar');
+            $snap_token = Orders::where('kodeorder', $kodeorder)->value('snap_token');
             $total_bayar = $detail_order->totalbayar = $totalBayar;
             
             if (!$detail_order) {
@@ -140,7 +174,7 @@ error_reporting(0);
         } else {
             return redirect()->back()->with('error', 'Kode Order harus diisi');
         }
-        return view('cart/pembayaran', compact('header','toptitle','detail_order','kodeorder','total_bayar'));
+        return view('cart/pembayaran', compact('header','toptitle','detail_order','kodeorder','total_bayar','snap_token'));
         //return view('landingpage.layout');
     }
 
@@ -170,6 +204,34 @@ error_reporting(0);
         return redirect()->back()->with('success', 'Pembayaran Telah Berhasil Dilakukan!, Akan Kami Proses');
     }
 
+    
+    public function sukses($kodeorder){
+        $header = false;
+        $toptitle = "Pembayaran Sukses ($kodeorder)";
+        $orders = Orders::where('kodeorder', $kodeorder)->first();
+        $orders->status = 'Lunas';
+        $orders->update();
+        return view('cart/sukses', compact('header','toptitle','orders'));
+    }
+
+    public function gagal($kodeorder){
+        $header = false;
+        $toptitle = "Pembayaran Gagal ($kodeorder)";
+        $orders = Orders::where('kodeorder', $kodeorder)->first();
+        $orders->status = 'Gagal';
+        $orders->update();
+        return view('cart/gagal', compact('header','toptitle','orders'));
+    }
+
+    public function pending($kodeorder){
+        $header = false;
+        $toptitle = "Pembayaran Pending ($kodeorder)";
+        $orders = Orders::where('kodeorder', $kodeorder)->first();
+        $orders->status = 'Pending';
+        $orders->update();
+        return view('cart/pending', compact('header','toptitle','orders'));
+    }
+    
     
     
 }

@@ -11,6 +11,7 @@ class Orders extends Model
     protected $fillable = [
         'kodecustomer',
         'kodeorder',
-        'status','totalbayar','waktupesan','statuspengerjaan'
+        'status','totalbayar','waktupesan','statuspengerjaan',
+        'snap_token'
     ];
 }

@@ -48,7 +48,7 @@
                 </table>
 
                 <div class="col-sm-12">
-                    <h6>Total Bayar Rp {{ $total_bayar }}</h6>
+                    <h6>Total Bayar Rp {{ number_format($total_bayar, 0, ',', '.') }}</h6>
                 </div>
                   
               </div>
@@ -58,7 +58,7 @@
                 
               <div class="row mt-3">
 
-              <div class="col-md-6">
+              <div class="col-md-6" style="display:none">
                   <div class="row">
                   <div class="col-md-6">
                     <img src="{{ asset('images/Rekening_BRI.jpg') }}" class="img-fluid" style="border-radius:10px" alt="">
@@ -71,20 +71,26 @@
                 
               </div>
 
-              <div class="col-md-6 mt-3">
+              <div class="col-md-12 mt-3">
+                <div class="row">
+                  <div class="col-sm-6" style="background: linear-gradient(90deg, #007bff 0%, #0069d9 100%); color: white; padding:10px">
+                    Lakukan Pembayaran Sesuai Total Yang Tertera : <span style="color: white;font-size: 30px">Rp. {{ number_format($total_bayar, 0, ',', '.') }}</span>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary btn-block btn-lg mt-3" style="background: linear-gradient(90deg, #007bff 0%, #0069d9 100%);padding:15px" id="pay-button"><i class="fas fa-money-bill-wave"></i> Bayar Sekarang</button>
+                  </div>
+                </div>
+              </div>
                 
-                  <form action="{{ route('pembayaran', $kodeorder) }}" method="POST" enctype="multipart/form-data">
+                  <!-- <form action="{{ route('pembayaran', $kodeorder) }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
-                      
-                      <div class="col-sm-12" style="background-color: #28a745; color: white; padding:10px">
-                        Lakukan Pembayaran Sesuai Total Yang Tertera : <h3 style="color: white;">Rp. {{ $total_bayar }}</h3>
-                      </div>
-                      <br>
+                       -->
+      
 
-
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <div class="col-sm-12">
                           <label for="namarekening">Nama Pemilik Rekening</label>
                         </div>
@@ -119,11 +125,11 @@
                       
                       <div class="col-sm-12">
                         <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                    </div>
+                    </div> -->
 
-                    </div>
+                    <!-- </div>
 
-                  </form>
+                  </form> -->
                     </div>
                 
               </div>
@@ -152,4 +158,32 @@
     </div>
 </section>
 
+@endsection
+
+@section('scripts')
+  <script src="https://app.midtrans.com/snap/snap.js" data-client-key="env('MIDTRANS_CLIENT_KEY')"></script>
+  <script type="text/javascript">
+      document.getElementById('pay-button').onclick = function(){
+        // SnapToken acquired from previous step
+        snap.pay('<?=$snap_token?>', {
+          // Optional
+          onSuccess: function(result){
+          window.location.href = "/sukses/{{ $kodeorder }}";
+            /* You may add your own js here, this is just example */ document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+          },
+          // Optional
+          onPending: function(result){
+
+          window.location.href = "/pending/{{ $kodeorder }}";
+            /* You may add your own js here, this is just example */ document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+          },
+          // Optional
+          onError: function(result){
+
+          window.location.href = "/gagal/{{ $kodeorder }}";
+            /* You may add your own js here, this is just example */ document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+          }
+        });
+      };
+    </script>
 @endsection

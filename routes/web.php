@@ -5,6 +5,8 @@ use \App\Http\Controllers\TracerStudyPageController;
 use \App\Http\Controllers\LoginPageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+
+use App\Http\Controllers\PaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +28,7 @@ Route::get('/hubungi-kami', 'App\Http\Controllers\LandingPageController@hubungik
 Route::get('/login', 'App\Http\Controllers\LoginPageController@index')->name('login');
 Route::post('/login', 'App\Http\Controllers\LoginPageController@authenticate')->name('login');
 Route::get('/logout', 'App\Http\Controllers\LoginPageController@actionlogout')->name('logout');
+Route::get('/profil', 'App\Http\Controllers\LoginPageController@profile')->name('profil');
 
 //REGISTER
 Route::get('daftar', [LoginPageController::class, 'register'])->name('daftar');
@@ -83,3 +86,10 @@ Route::get('/riwayatorder', 'App\Http\Controllers\PenjualanPageController@riwaya
 Route::get('/riwayatorder/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@detail');
 Route::get('/pembayaran/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@pembayaran')->name('pembayaran');
 Route::post('/pembayaran/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@pembayaranselesai')->name('pembayaranselesai');
+
+Route::get('/payment', [PaymentController::class, 'createPayment']);
+Route::post('/payment/callback', [PaymentController::class, 'paymentCallback']);
+
+Route::get('/sukses/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@sukses')->name('sukses');
+Route::get('/gagal/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@gagal')->name('gagal');
+Route::get('/pending/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@pending')->name('pending');

@@ -7,6 +7,10 @@ chat='true'>
 <head>
     @include('landingpage.head')
   
+    <script type="text/javascript"
+            src="https://app.sandbox.midtrans.com/snap/snap.js"
+            data-client-key="{{ config('services.midtrans.client_key') }}"></script>
+
 </head>
 <body>
     @include('landingpage.header')
@@ -19,3 +23,4 @@ chat='true'>
     @yield('content')
     @include('landingpage.footer')
 
+    @yield('scripts')

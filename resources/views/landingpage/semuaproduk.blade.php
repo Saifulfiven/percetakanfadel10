@@ -13,7 +13,10 @@
                             <div class="p-2 pb-3">
                                 <div class="product-wap card rounded-0">
                                     <div class="card rounded-0">
-                                        <img class="card-img rounded-0 img-fluid" src="{{ asset('images/produk/'. $produks->gambar) }}">
+                                        <?php $fotoprodukpertama = \App\Models\Fotoproduks::where('id_produk', $produks->id)->first(); ?>
+                                        <img class="card-img rounded-0 img-fluid" src="{{ $fotoprodukpertama ? asset('images/produk/'. $fotoprodukpertama->fotoproduk) : asset('images/produk/Gambar-Produk-Kosong.jpg') }}">
+
+
                                         <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="/detailproduk"><i class="far fa-heart"></i></a></li>
@@ -23,7 +26,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <a href="/detailproduk" class="h3 text-decoration-none">{{ $produks->namaproduk }}</a>
+                                        <a href="/detailproduk/{{ $produks->slug }}" class="h3 text-decoration-none">{{ $produks->namaproduk }}</a>
                                         <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                             
                                             <li class="pt-2">

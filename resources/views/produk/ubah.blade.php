@@ -28,11 +28,13 @@
                                 <input type="text" class="form-control" name="namaproduk" id="namaproduk" value="{{ $produk->namaproduk }}" required>
                             </div>
                             <div class="form-group row">
-                                <label for="harga" class="col-sm-2 col-form-label">Harga</label>
+                                
                                 <div class="col-sm-2">
+                                <label for="harga" class="col-sm-4 col-form-label">Harga</label>
                                     <input type="text" class="form-control" name="hargaproduk" id="hargaproduk" value="{{ $produk->hargaproduk }}" required>
                                 </div>
                                 <div class="col-sm-2">
+                                    <label for="satuan" class="col-form-label">Satuan</label>
                                     <select class="form-select" name="satuan" id="satuan" required>
                                         <option value="">Pilih Satuan</option>
                                         <option {{ $produk->satuan == 'centimeter' ? 'selected' : '' }} value="centimeter">Centimeter</option>

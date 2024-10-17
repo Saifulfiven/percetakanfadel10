@@ -87,7 +87,7 @@
                                             </div>
                                             
                                                 <div class="form-group">
-                                                    <label for="gambar{{$i}}" class="col-sm-3 col-form-label">Gambar {{$i}}</label>
+                                                    <label for="gambar" class="col-sm-3 col-form-label">Gambar</label>
                                                     <input type="file" class="form-control" name="gambar[]" id="gambar" multiple>
                                                 </div>
                                             

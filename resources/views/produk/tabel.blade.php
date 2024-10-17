@@ -33,6 +33,7 @@
                       <th class="text-secondary">No</th>
                         <th class="text-secondary">Nama Produk</th>
                         <th class="text-secondary">Harga</th>
+                        <th class="text-secondary">Satuan</th>
                         <th class="text-secondary">Kategori</th>
                       <th class="text-secondary">Created at</th>
                       <th class="text-secondary text-center">Aksi</th>
@@ -46,6 +47,7 @@
                         <td>{{ $index+1 }}</td>
                         <td>{{ $item['namaproduk'] }}</td>
                         <td>{{ $item['hargaproduk'] }}</td>
+                        <td>{{ $item['satuan'] }}</td>
                         <td>{{ $item['namakategori'] }}</td>
                         <td>{{ $item['created_at'] }}</td>
                         <td class="text-center">

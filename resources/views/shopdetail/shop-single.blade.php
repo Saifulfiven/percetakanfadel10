@@ -91,14 +91,20 @@
                             @include('shopdetail.form-undangan')
                         @elseif($kategori->id == '2')
                             @include('shopdetail.form-stikerlabel')
-                        @elseif($kategori->id == '3')
-                            @include('shopdetail.form-stikerlabel')
                         @elseif($kategori->id == '5')
                             @include('shopdetail.form-brosur')
                         @elseif($kategori->id == '6')
                             @include('shopdetail.form-stikerposter')
                         @elseif($kategori->id == '11')
                             @include('shopdetail.form-kartunama')
+                        @elseif($kategori->id == '9')
+                            @include('shopdetail.form-marchendise')
+                        @elseif($kategori->id == '12')
+                            @include('shopdetail.form-brosur')
+                        @elseif($kategori->id == '13')
+                            @include('shopdetail.form-marchendise')
+                        @elseif($kategori->id == '14')
+                            @include('shopdetail.form-marchendise')
                         @endif
 
                         </div>

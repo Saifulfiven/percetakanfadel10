@@ -83,7 +83,7 @@ class LandingPageController extends Controller
         $acara = "Apa Yang Terjadi";
         $header = false;
 
-        return view('Landingpage.hubungi-kami', compact('berita', 'acara','header'));
+        return view('landingpage.hubungi-kami', compact('berita', 'acara','header'));
     }
 
 
